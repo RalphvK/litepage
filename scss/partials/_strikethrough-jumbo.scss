@@ -1,0 +1,34 @@
+$cfg: (
+    'line-thickness': 3px,
+    'line-margin-top': 0.7em,
+    'line-color': rgba($primary, 0.5),
+    'color': $gray-500
+);
+
+.strikethrough-jumbo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .strikethrough {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .strikethrough s {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: map-get($cfg, 'line-thickness');
+    margin-top: map-get($cfg, 'line-margin-top');
+    background: map-get($cfg, 'line-color');
+    transform-origin: center left;
+  }
+
+  .title {
+    margin-top: 30px;
+  }
+  
+}

@@ -1,0 +1,42 @@
+#bloat-animation {
+  
+  * {
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  
+  // loading
+  #Loading_Bar {
+    transform-origin: left center;
+  }
+
+  #Cookies {
+    opacity: 0;
+  }
+  
+  #Newsletter {
+    opacity: 0;
+  }
+  
+  #Privacy {
+    opacity: 0;
+  }
+  
+  #Adblocker {
+    opacity: 0;
+  }
+  
+  #Notifications {
+    opacity: 0;
+  }
+  
+  #App_Banner {
+    opacity: 0;
+    transform-origin: center top;
+  }
+  
+  #Actual_Content {
+    opacity: 0;
+  }
+    
+}
