@@ -449,23 +449,23 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, .column-lines {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container {
+    .container, .column-lines {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container {
+    .container, .column-lines {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, .column-lines {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, .column-lines {
       max-width: 1140px; } }
 
 .container-fluid {
@@ -2735,7 +2735,7 @@ tbody.collapse.show {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar > .container,
+  .navbar > .container, .navbar > .column-lines,
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
@@ -2798,7 +2798,7 @@ tbody.collapse.show {
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .column-lines,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2816,7 +2816,7 @@ tbody.collapse.show {
       .navbar-expand-sm .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container,
+    .navbar-expand-sm > .container, .navbar-expand-sm > .column-lines,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -2828,7 +2828,7 @@ tbody.collapse.show {
       top: auto;
       bottom: 100%; } }
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container,
+  .navbar-expand-md > .container, .navbar-expand-md > .column-lines,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2846,7 +2846,7 @@ tbody.collapse.show {
       .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container,
+    .navbar-expand-md > .container, .navbar-expand-md > .column-lines,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -2858,7 +2858,7 @@ tbody.collapse.show {
       top: auto;
       bottom: 100%; } }
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .column-lines,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2876,7 +2876,7 @@ tbody.collapse.show {
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .column-lines,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -2888,7 +2888,7 @@ tbody.collapse.show {
       top: auto;
       bottom: 100%; } }
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .column-lines,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2906,7 +2906,7 @@ tbody.collapse.show {
       .navbar-expand-xl .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .column-lines,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -2920,7 +2920,7 @@ tbody.collapse.show {
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, .navbar-expand > .column-lines,
   .navbar-expand > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
@@ -2934,7 +2934,7 @@ tbody.collapse.show {
     .navbar-expand .navbar-nav .nav-link {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, .navbar-expand > .column-lines,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -6472,7 +6472,7 @@ a.text-dark:hover, a.text-dark:focus {
   body {
     min-width: 992px !important; }
 
-  .container {
+  .container, .column-lines {
     min-width: 992px !important; }
 
   .navbar {
@@ -6575,5 +6575,22 @@ Buttons
 
 .btn {
   font-size: 0.7em; }
+
+body {
+  position: relative !important; }
+
+.column-lines {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  z-index: -1; }
+  .column-lines .col {
+    border-right: 1px solid #ced4da; }
+    .column-lines .col:first-child {
+      border-left: 1px solid #ced4da; }
 
 /*# sourceMappingURL=style.css.map */
