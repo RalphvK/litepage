@@ -1,4 +1,4 @@
-$cfg: (
+$columnLines: (
     'border': 1px solid $gray-400
 );
 
@@ -20,10 +20,10 @@ body {
     z-index: -1;
 
     .col {
-        border-right: map-get($cfg, 'border');
+        border-right: map-get($columnLines, 'border');
 
         &:first-child {
-            border-left: map-get($cfg, 'border');
+            border-left: map-get($columnLines, 'border');
         }
     }
 
