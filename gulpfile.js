@@ -5,12 +5,16 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
+var sourcemaps = require('gulp-sourcemaps');
 
 // sass
-gulp.task('sass', function () {
+gulp.task('scss', function () {
   return gulp.src('./scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css/'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./css'));
 });
 
 // concat
@@ -34,6 +38,7 @@ gulp.task('concat_js', function() {
 gulp.task('watch', function () {
   gulp.watch('./js/partials/**/*.js', gulp.series('concat_js'));
   gulp.watch('./js/index.json', gulp.series('concat_js'));
+  gulp.watch('./scss/**/*.scss', gulp.series('scss'));
 });
 
-gulp.task('default', gulp.series('watch', 'concat_js'));
+gulp.task('default', gulp.series('watch', 'concat_js', 'scss'));
