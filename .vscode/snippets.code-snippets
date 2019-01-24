@@ -1,0 +1,10 @@
+{
+	"SCSS_Config_Map": {
+		"prefix": "cfg",
+		"scope": "scss",
+		"body": [
+			"map-get(\\$cfg, '${1:property}')$0",
+		],
+		"description": "For Loop"
+	}
+}
