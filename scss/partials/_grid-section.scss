@@ -1,0 +1,54 @@
+$grid-section: (
+    'content-bg': $white,
+    'illustration-bg': #5962ab,
+    'section-margin': 200px,
+    'column-border': map-get($columnLines, 'border')
+);
+
+.grid-section {
+
+    margin-top: map-get($grid-section, 'section-margin');
+    margin-bottom: map-get($grid-section, 'section-margin');
+
+    .col-content {
+        border: map-get($grid-section, 'column-border');
+        background-color: map-get($grid-section, 'content-bg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 180px 60px;
+
+        .content {
+            hyphens: manual;
+
+            p {
+                margin-top: 70px;
+                font-weight: 500;
+                font-size: 0.85em;
+                line-height: 2.5em;
+            }
+        }
+    }
+
+    .col-md-6.col-content {
+
+        .content {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 430px;
+        }
+
+        // removing adjacent border
+        &:nth-child(even) {
+        
+            @include media-breakpoint-up(md) {
+                border-left: none;
+            }
+            @include media-breakpoint-down(sm) {
+                border-top: none;
+            }
+        
+        }
+
+    }
+}

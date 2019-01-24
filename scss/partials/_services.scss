@@ -1,19 +1,9 @@
-$cfg: (
-    'illustration-bg': #5962ab,
-    'content-bg': $white,
-    'row-margin': 200px
-);
+$cfg: $grid-section; // copy config from grid-section (not using $grid-section to allow separate styling in future)
 
 .service-row {
 
-    margin-top: map-get($cfg, 'row-margin');
-    margin-bottom: map-get($cfg, 'row-margin');
-
-    &>div {
-        border: map-get($columnLines, 'border');
-    }
-
     .col-illustration {
+        border: map-get($grid-section, 'column-border');
         position: relative;
         background-color: map-get($cfg, 'illustration-bg');
         height: 100%;
@@ -39,23 +29,12 @@ $cfg: (
     }
 
     .col-content {
-        background-color: map-get($cfg, 'content-bg');
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        padding: 100px 15px;
         
         .content {
             margin-left: auto;
             margin-right: auto;
             max-width: 430px;
-            hyphens: manual;
-
-            p {
-                margin-top: 70px;
-                font-weight: 500;
-                font-size: 0.85em;
-                line-height: 2.5em;
-            }
         }
     }
 

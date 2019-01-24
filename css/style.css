@@ -6309,6 +6309,34 @@ body {
     .column-lines .col:first-child {
       border-left: 1px solid #ced4da; }
 
+.grid-section {
+  margin-top: 200px;
+  margin-bottom: 200px; }
+  .grid-section .col-content {
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 180px 60px; }
+    .grid-section .col-content .content {
+      hyphens: manual; }
+      .grid-section .col-content .content p {
+        margin-top: 70px;
+        font-weight: 500;
+        font-size: 0.85em;
+        line-height: 2.5em; }
+  .grid-section .col-md-6.col-content .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 430px; }
+  @media (min-width: 768px) {
+    .grid-section .col-md-6.col-content:nth-child(even) {
+      border-left: none; } }
+  @media (max-width: 767.98px) {
+    .grid-section .col-md-6.col-content:nth-child(even) {
+      border-top: none; } }
+
 .strikethrough-jumbo {
   display: flex;
   flex-direction: column;
@@ -6384,43 +6412,31 @@ body {
         -moz-box-shadow: 0px 0px 60px 0px rgba(0, 123, 255, 0.3);
         box-shadow: 0px 0px 60px 0px rgba(0, 123, 255, 0.3); }
 
-.service-row {
-  margin-top: 200px;
-  margin-bottom: 200px; }
-  .service-row > div {
-    border: 1px solid #ced4da; }
-  .service-row .col-illustration {
-    position: relative;
-    background-color: #5962ab;
-    height: 100%; }
-    .service-row .col-illustration:before {
-      content: "";
-      display: block;
-      margin-top: 100%; }
-    .service-row .col-illustration .illustration {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      text-align: center;
-      display: flex;
-      justify-content: center; }
-  .service-row .col-content {
-    background-color: #ffffff;
+.service-row .col-illustration {
+  border: 1px solid #ced4da;
+  position: relative;
+  background-color: #5962ab;
+  height: 100%; }
+  .service-row .col-illustration:before {
+    content: "";
+    display: block;
+    margin-top: 100%; }
+  .service-row .col-illustration .illustration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center; }
-    .service-row .col-content .content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 430px;
-      hyphens: manual; }
-      .service-row .col-content .content p {
-        margin-top: 70px;
-        font-weight: 500;
-        font-size: 0.85em;
-        line-height: 2.5em; }
+
+.service-row .col-content {
+  padding: 100px 15px; }
+  .service-row .col-content .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 430px; }
 
 #development .illustration svg {
   max-width: 80%;
