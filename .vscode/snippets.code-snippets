@@ -5,6 +5,14 @@
 		"body": [
 			"map-get(\\$cfg, '${1:property}')$0",
 		],
-		"description": "For Loop"
+		"description": "Config map"
+	},
+	"SCSS_Map": {
+		"prefix": "map-get",
+		"scope": "scss",
+		"body": [
+			"map-get(\\$${1:map}, '${2:property}')$0",
+		],
+		"description": "map-get"
 	}
 }
