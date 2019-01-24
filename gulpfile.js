@@ -5,16 +5,28 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
+var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 
-// sass
+var path = {
+    scss: './scss/style.scss',
+    css: './css'
+};
+
+// scss
 gulp.task('scss', function () {
-  return gulp.src('./scss/style.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css/'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'));
+    return gulp.src(path.scss)
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(path.css))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(path.css));
+});
+gulp.task('scss-minify', function () {
+    return gulp.src(path.scss)
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(path.css));
 });
 
 // concat
@@ -38,7 +50,7 @@ gulp.task('concat_js', function() {
 gulp.task('watch', function () {
   gulp.watch('./js/partials/**/*.js', gulp.series('concat_js'));
   gulp.watch('./js/index.json', gulp.series('concat_js'));
-  gulp.watch('./scss/**/*.scss', gulp.series('scss'));
+    gulp.watch('./scss/**/*.scss', gulp.series('scss', 'scss-minify'));
 });
 
-gulp.task('default', gulp.series('watch', 'concat_js', 'scss'));
+gulp.task('default', gulp.series('watch', 'concat_js', 'scss', 'scss-minify'));
