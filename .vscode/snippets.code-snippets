@@ -14,5 +14,16 @@
 			"map-get(\\$${1:map}, '${2:property}')$0",
 		],
 		"description": "map-get"
+	},
+	"Absolute_Stretch": {
+		"prefix": "top:left:bottom:left:",
+		"scope": "css,scss",
+		"body": [
+			"top: 0;",
+			"right: 0;",
+			"bottom: 0;",
+			"left: 0;"
+		],
+		"description": "Absolute Stretch"
 	}
 }
