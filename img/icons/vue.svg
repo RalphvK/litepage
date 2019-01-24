@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.24 20.91">
+  <title>vue</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M19.39,0h4.85L12.12,20.91,0,0H9.27l2.85,4.85L14.91,0Z" style="fill: #41b883"/>
+        <path d="M0,0,12.12,20.91,24.24,0H19.39L12.12,12.54,4.79,0Z" style="fill: #41b883"/>
+        <path d="M4.79,0l7.33,12.6L19.39,0H14.91L12.12,4.85,9.27,0Z" style="fill: #35495e"/>
+      </g>
+    </g>
+  </g>
+</svg>

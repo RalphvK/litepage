@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.24 27.52">
+  <title>html5</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M2.2,24.72,0,0H24.24L22,24.72l-9.95,2.8" style="fill: #e34f26"/>
+        <path d="M12.15,25.37l8-2.21L22,2H12.15" style="fill: #ef652a"/>
+        <path d="M12.15,11.18h-4L7.85,8.06h4.3v-3H4.51l.06.81.75,8.38h6.83Zm0,7.9h-.06l-3.38-.91-.22-2.42h-3l.38,4.78,6.23,1.72h.06Z" style="fill: #ebebeb"/>
+        <path d="M12.09,11.18v3.06h3.77l-.38,3.93-3.39.91v3.17l6.24-1.72.05-.54.7-8,.11-.81h-7.1Zm0-6.13v3h7.37l.05-.64.16-1.56,0-.81Z" style="fill: #fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -6321,7 +6321,7 @@ body {
     padding: 180px 60px; }
     .grid-section .col-content .content {
       hyphens: manual; }
-      .grid-section .col-content .content p {
+      .grid-section .col-content .content p, .grid-section .col-content .content div.row {
         margin-top: 70px;
         font-weight: 500;
         font-size: 0.85em;
@@ -6539,5 +6539,19 @@ body {
 
 #branding-animation #page-right {
   transform-origin: left center; }
+
+.techlist-row ul {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 70px;
+  white-space: nowrap; }
+  .techlist-row ul:last-child {
+    margin-bottom: 0px; }
+  .techlist-row ul li {
+    line-height: 3.5em; }
+  .techlist-row ul img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

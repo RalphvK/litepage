@@ -2,7 +2,8 @@ $grid-section: (
     'content-bg': $white,
     'illustration-bg': #5962ab,
     'section-margin': 200px,
-    'column-border': map-get($columnLines, 'border')
+    'column-border': map-get($columnLines, 'border'),
+    'paragraph-margin': 70px
 );
 
 .grid-section {
@@ -21,8 +22,8 @@ $grid-section: (
         .content {
             hyphens: manual;
 
-            p {
-                margin-top: 70px;
+            p, div.row {
+                margin-top: map-get($grid-section, 'paragraph-margin');
                 font-weight: 500;
                 font-size: 0.85em;
                 line-height: 2.5em;
