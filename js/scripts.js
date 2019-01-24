@@ -560,3 +560,357 @@ function bloatAnimation(selector = "#bloat-animation") {
     }, config.loadingTime - 2000);
 
 }
+function brandingAnimation(selector = "#branding-animation") {
+    var tl = anime.timeline({
+        loop: false
+    });
+
+    // logo drawing
+    tl.add({
+        targets: selector+' #line-logo *',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 3000,
+        delay: function (el, i) { return i * 250 }
+    });
+
+    // color strips
+    tl.add({
+        targets: [
+            selector+' #strip-blue',
+            selector+' #strip-green',
+            selector+' #strip-purple',
+        ],
+        opacity: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 2000 }
+        ],
+        rotate: anime.stagger([0, -30]),
+        duration: 2000
+    }, '-=500');
+
+    // business card
+    tl.add({
+        targets: [
+            selector+' #business-card',
+            selector+' #business-card-back'
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 500 }
+        ],
+        delay: anime.stagger(250)
+    }, '-=1500');
+
+    // mobile device
+    tl.add({
+        targets: [
+            '#branding-animation #mobile'
+        ],
+        opacity: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ]
+    }, '-=1000');
+    // mobile hero
+    tl.add({
+        targets: [
+            '#branding-animation #mobile #hero *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 500 }
+        ],
+        delay: anime.stagger(100)
+    }, '-=1000');
+    // mobile content bg
+    tl.add({
+        targets: '#branding-animation #mobile #pagebg',
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 500 }
+        ],
+        easing: 'easeInOutSine'
+    }, '-=1000');
+    // mobile content
+    tl.add({
+        targets: [
+            selector+' #mobile #p1 *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 400 }
+        ],
+        delay: anime.stagger(50)
+    }, '-=1000');
+
+    // booklet
+    tl.add({
+        targets: [
+            selector+' #page-left',
+            selector+' #page-right'
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ],
+        delay: anime.stagger(250),
+        endDelay: 2000
+    }, '-=1000');
+}
+function designAnimation(selector = "#design-animation") {
+    var tl = anime.timeline({
+        loop: false
+    });
+
+    // mobile hero
+    tl.add({
+        targets: [
+            selector+' #mobile #hero *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 700 }
+        ],
+        delay: anime.stagger(100)
+    });
+
+    // mobile content bg
+    tl.add({
+        targets: selector+' #mobile #pagebg',
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ]
+    });
+
+    // mobile content
+    tl.add({
+        targets: [
+            selector+' #mobile #p1 *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 400 }
+        ],
+        delay: anime.stagger(50)
+    }, '-=500');
+
+    // device fade
+    tl.add({
+        targets: [
+            selector+' #mobile #device'
+        ],
+        opacity: [
+            { value: 1, duration: 0 },
+            { value: 0, duration: 1500 }
+        ]
+    });
+
+    //desktop hero
+    tl.add({
+        targets: [
+            selector+' #Desktop #navbar',
+            selector+' #Desktop #navbar *',
+            selector+' #Desktop #hero-2 #h1-2 *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 700 }
+        ],
+        delay: anime.stagger(100)
+    }, '-=750');
+
+    tl.add({
+        targets: [
+            selector+' #Desktop #hero-2 #hero-bg-2'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 700 }
+        ],
+        delay: anime.stagger(100)
+    }, '-=2000');
+
+    // body
+    tl.add({
+        targets: [
+            selector+' #Desktop #bodybg'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 700 }
+        ]
+    }, '-=1500');
+    tl.add({
+        targets: [
+            selector+' #Desktop #p1-2',
+            selector+' #Desktop #p2',
+            selector+' #Desktop #sidebar'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 700 }
+        ],
+        delay: anime.stagger(100)
+    }, '-=1000');
+
+    // monitor
+    tl.add({
+        targets: [
+            selector+' #monitor'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scale: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ]
+    }, '-=2000');
+
+    // end
+    tl.add({
+        targets: [
+            selector+' #mobile #device'
+        ],
+        opacity: 1,
+        duration: 0
+    }, '-=500');
+
+    // scale both
+    tl.add({
+        targets: [
+            selector+' #mobile'
+        ],
+        translateX: [
+            { value: 0, duration: 0 },
+            { value: -100, duration: 1000 }
+        ],
+        duration: 1000
+    }, '-=1000');
+    tl.add({
+        targets: [
+            selector+' #desktop-monitor'
+        ],
+        translateX: [
+            { value: 0, duration: 0 },
+            { value: -50, duration: 1000 }
+        ],
+        duration: 1000
+    });
+    tl.add({
+        targets: [
+            selector+' #mobile',
+            selector+' #desktop-monitor'
+        ],
+        scale: 0.7,
+        duration: 1000
+    }, '-=900');
+}
+function webdevAnimation(selector = "#webdev-animation") {
+    var code = {
+        targets: selector+' #Code *',
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 200 }
+        ],
+        easing: 'linear',
+        delay: anime.stagger(70) // increase delay by 100ms for each elements.
+    };
+
+    var tl = anime.timeline({
+        loop: true
+    });
+
+    // code
+    tl.add(code);
+
+    // window change
+    tl.add({
+        targets: selector+' #in-browser',
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ]
+    });
+
+    // hero
+    tl.add({
+        targets: [
+            selector+' #in-browser #hero',
+            selector+' #in-browser #Logo',
+            selector+' #in-browser #menu',
+            selector+' #in-browser #h1'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleY: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ],
+        delay: anime.stagger(300)
+    });
+
+    // body
+    tl.add({
+        targets: [
+            selector+' #in-browser #body_text *'
+        ],
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scaleX: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 200 }
+        ],
+        easing: 'linear',
+        delay: anime.stagger(50) // increase delay by 100ms for each elements.
+    });
+
+    // image
+    tl.add({
+        targets: selector+' #in-browser #image',
+        opacity: [
+            { value: 1, duration: 0 }
+        ],
+        scale: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 1000 }
+        ]
+    });
+}

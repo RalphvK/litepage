@@ -1,0 +1,49 @@
+#branding-animation {
+  
+  * {
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  
+  #strip-blue,
+  #strip-green,
+  #strip-purple{
+    transform-origin: right bottom;
+  }
+  
+  #mobile * {
+    transform-box: view-box;
+    transform-origin: left top;
+  }
+  
+  #mobile #screen {
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  
+  #mobile #screen * {
+    transform-box: fill-box;
+    
+    #hero * {
+      opacity: 0;
+    }
+    
+    #pagebg {
+      opacity: 0;
+    }
+    
+    #p1 * {
+      opacity: 0;
+    }
+    
+  }
+  
+  #page-left {
+    transform-origin: right center;
+  }
+  
+  #page-right {
+    transform-origin: left center;
+  }
+    
+}

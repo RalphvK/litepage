@@ -1,0 +1,63 @@
+#design-animation {
+  
+  #mobile #screen {
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  
+  #mobile #screen * {
+    transform-box: fill-box;
+    
+    #hero * {
+      opacity: 0;
+    }
+    
+    #pagebg {
+      opacity: 0;
+    }
+    
+    #p1 * {
+      opacity: 0;
+    }
+    
+  }
+  
+  #desktop-monitor {
+    transform-box: fill-box;
+    transform-origin: right bottom;
+  }
+  
+  #monitor {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  
+  #Desktop * {
+    transform-box: fill-box;
+  }
+  
+  #Desktop {
+    transform-box: fill-box;
+    transform-origin: center center;
+    
+    #hero-2 *, #bodybg, #border, #p2, #p1-2, #sidebar {
+      opacity: 0;
+    }
+    #hero-2 #hero-bg-2, #bodybg {
+      transform-origin: center center;
+    }
+    #hero-2 * {
+      transform-origin: center top;
+    }
+  }
+  
+  #wireframes {
+    opacity: 0;
+    
+    #nodes * {
+      opacity: 0;
+    }
+  }
+  
+}

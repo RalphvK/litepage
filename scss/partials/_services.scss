@@ -1,0 +1,87 @@
+$cfg: (
+    'illustration-bg': #5962ab,
+    'content-bg': $white,
+    'row-margin': 200px
+);
+
+.service-row {
+
+    margin-top: map-get($cfg, 'row-margin');
+    margin-bottom: map-get($cfg, 'row-margin');
+
+    &>div {
+        border: map-get($columnLines, 'border');
+    }
+
+    .col-illustration {
+        position: relative;
+        background-color: map-get($cfg, 'illustration-bg');
+        height: 100%;
+
+        // square aspect ratio
+        &:before{
+            content: "";
+            display: block;
+            margin-top: 100%;
+        }
+
+        .illustration {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    .col-content {
+        background-color: map-get($cfg, 'content-bg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .content {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 430px;
+            hyphens: manual;
+
+            p {
+                margin-top: 70px;
+                font-weight: 500;
+                font-size: 0.85em;
+                line-height: 2.5em;
+            }
+        }
+    }
+
+}
+
+#development {
+
+    .illustration svg {
+        max-width: 80%;
+        transform: translate(-6.5%, -2.5%);
+    }
+
+}
+
+#design {
+
+    .illustration svg {
+        max-width: 80%;
+    }
+
+}
+
+#branding {
+
+    .illustration svg {
+        max-width: 80%;
+    }
+
+}
