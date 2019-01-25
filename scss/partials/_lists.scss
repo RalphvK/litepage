@@ -1,0 +1,42 @@
+.techlist-row, .policylist-row {
+
+    ul {
+        padding: 0px;
+        margin-bottom: map-get($grid-section, 'paragraph-margin');
+        white-space: nowrap;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        li {
+            line-height: 3.5em;
+            list-style: none;
+        }
+
+        img {
+            height: 1.5em;
+            width: 1.5em;
+            margin-right: 10px;
+        }
+    }
+
+}
+
+.policylist-row {
+
+    ul {
+        li:before{
+            content: '';
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+            margin-right: 12px;
+            margin-bottom: -3px;
+            background-image: url('../img/icons/checkmark.svg');
+            background-size: fill;
+            background-repeat: no-repeat;
+        }
+    }
+
+}

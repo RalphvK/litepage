@@ -43,6 +43,16 @@ h3 {
     @include h3();
 }
 
+@mixin h6() {
+    font-size: inherit;
+    font-weight: bolder;
+    margin: 0 0;
+    padding: 0 0;
+}
+h6 {
+    @include h6();
+}
+
 @mixin hr() {
     margin: 40px auto;
 }

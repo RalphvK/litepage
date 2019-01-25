@@ -6061,6 +6061,12 @@ h3 {
   font-weight: 700;
   font-size: 2rem; }
 
+h6 {
+  font-size: inherit;
+  font-weight: bolder;
+  margin: 0 0;
+  padding: 0 0; }
+
 hr {
   margin: 40px auto; }
 
@@ -6540,18 +6546,32 @@ body {
 #branding-animation #page-right {
   transform-origin: left center; }
 
-.techlist-row ul {
-  list-style: none;
+.techlist-row ul, .policylist-row ul {
   padding: 0px;
   margin-bottom: 70px;
   white-space: nowrap; }
-  .techlist-row ul:last-child {
+  .techlist-row ul:last-child, .policylist-row ul:last-child {
     margin-bottom: 0px; }
-  .techlist-row ul li {
-    line-height: 3.5em; }
-  .techlist-row ul img {
+  .techlist-row ul li, .policylist-row ul li {
+    line-height: 3.5em;
+    list-style: none; }
+  .techlist-row ul img, .policylist-row ul img {
     height: 1.5em;
     width: 1.5em;
     margin-right: 10px; }
+
+.policylist-row ul li:before {
+  content: '';
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-right: 12px;
+  margin-bottom: -3px;
+  background-image: url("../img/icons/checkmark.svg");
+  background-size: fill;
+  background-repeat: no-repeat; }
+
+#about.grid-section .col-content {
+  justify-content: flex-start; }
 
 /*# sourceMappingURL=style.css.map */
