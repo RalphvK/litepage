@@ -3,7 +3,7 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
 .service-row {
 
     .col-illustration {
-        border: map-get($grid-section, 'column-border');
+        border: map-get($cfg, 'column-border');
         position: relative;
         background-color: map-get($cfg, 'illustration-bg');
         min-height: 100%;

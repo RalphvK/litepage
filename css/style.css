@@ -6218,6 +6218,29 @@ button.hamburger {
       margin-left: auto;
       margin-right: auto; } }
 
+ul.blockquote-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0;
+  padding: 0 0; }
+  ul.blockquote-list li {
+    margin-bottom: 40px;
+    border-left: 2px solid #ffffff;
+    padding-left: 30px;
+    margin-left: 30px; }
+    ul.blockquote-list li:last-child {
+      margin-bottom: 0px; }
+    ul.blockquote-list li .label {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8em;
+      padding-bottom: 5px; }
+    ul.blockquote-list li .value {
+      font-size: 0.85em;
+      font-weight: 600; }
+
 .blinking-cursor {
   display: inline-block;
   margin-left: 2px;
@@ -6591,5 +6614,17 @@ body {
 
 #about.grid-section .col-content {
   justify-content: flex-start; }
+
+#contact .row > .col-content:last-child {
+  background-color: #5962ab;
+  color: #ffffff;
+  background-image: url("../img/graphics/lines-white.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top right; }
+  #contact .row > .col-content:last-child a {
+    color: white; }
+    #contact .row > .col-content:last-child a:hover {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */

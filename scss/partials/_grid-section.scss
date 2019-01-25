@@ -1,6 +1,7 @@
 $grid-section: (
     'content-bg': $white,
     'illustration-bg': #5962ab,
+    'illustration-color': $white,
     'section-margin': 200px,
     'column-border': map-get($columnLines, 'border'),
     'paragraph-margin': 70px,

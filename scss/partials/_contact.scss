@@ -1,0 +1,19 @@
+#contact {
+
+    .row > .col-content:last-child {
+        background-color: map-get($cfg, 'illustration-bg');
+        color: map-get($cfg, 'illustration-color');
+        background-image: url('../img/graphics/lines-white.svg');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: top right;
+
+        a {
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
