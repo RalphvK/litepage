@@ -3,7 +3,9 @@ $grid-section: (
     'illustration-bg': #5962ab,
     'section-margin': 200px,
     'column-border': map-get($columnLines, 'border'),
-    'paragraph-margin': 70px
+    'paragraph-margin': 70px,
+    'content-margin': 85px,
+    'content-margin-mobile': 10%
 );
 
 .grid-section {
@@ -11,15 +13,32 @@ $grid-section: (
     margin-top: map-get($grid-section, 'section-margin');
     margin-bottom: map-get($grid-section, 'section-margin');
 
+    .row {
+        justify-content: stretch;
+    }
+
     .col-content {
         border: map-get($grid-section, 'column-border');
         background-color: map-get($grid-section, 'content-bg');
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 180px 60px;
+        padding: 175px 60px;
 
         .content {
+
+            margin-left: map-get($grid-section, 'content-margin');
+            margin-right: map-get($grid-section, 'content-margin');
+
+            @include media-breakpoint-down(lg) {
+                margin-left: map-get($grid-section, 'content-margin-mobile');
+                margin-right: map-get($grid-section, 'content-margin-mobile');
+            }
+            @include media-breakpoint-down(sm) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
             hyphens: manual;
 
             p, div.row {
@@ -31,21 +50,15 @@ $grid-section: (
         }
     }
 
-    .col-md-6.col-content {
-
-        .content {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 430px;
-        }
+    .col-content {
 
         // removing adjacent border
         &:nth-child(even) {
         
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-up(lg) {
                 border-left: none;
             }
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 border-top: none;
             }
         

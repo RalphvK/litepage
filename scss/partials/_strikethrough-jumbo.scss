@@ -2,13 +2,16 @@ $cfg: (
     'line-thickness': 3px,
     'line-margin-top': 0.7em,
     'line-color': rgba($primary, 0.5),
-    'color': $gray-500
+    'color': $gray-500,
+    'min-height': 312px
 );
 
 .strikethrough-jumbo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-end;
+  min-height: map-get($cfg, 'min-height');
 
   .strikethrough {
     display: inline-block;

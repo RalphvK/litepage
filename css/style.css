@@ -6318,35 +6318,45 @@ body {
 .grid-section {
   margin-top: 200px;
   margin-bottom: 200px; }
+  .grid-section .row {
+    justify-content: stretch; }
   .grid-section .col-content {
     border: 1px solid #ced4da;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 180px 60px; }
+    padding: 175px 60px; }
     .grid-section .col-content .content {
+      margin-left: 85px;
+      margin-right: 85px;
       hyphens: manual; }
+      @media (max-width: 1199.98px) {
+        .grid-section .col-content .content {
+          margin-left: 10%;
+          margin-right: 10%; } }
+      @media (max-width: 767.98px) {
+        .grid-section .col-content .content {
+          margin-left: 0;
+          margin-right: 0; } }
       .grid-section .col-content .content p, .grid-section .col-content .content div.row {
         margin-top: 70px;
         font-weight: 500;
         font-size: 0.85em;
         line-height: 2.5em; }
-  .grid-section .col-md-6.col-content .content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 430px; }
-  @media (min-width: 768px) {
-    .grid-section .col-md-6.col-content:nth-child(even) {
+  @media (min-width: 992px) {
+    .grid-section .col-content:nth-child(even) {
       border-left: none; } }
-  @media (max-width: 767.98px) {
-    .grid-section .col-md-6.col-content:nth-child(even) {
+  @media (max-width: 991.98px) {
+    .grid-section .col-content:nth-child(even) {
       border-top: none; } }
 
 .strikethrough-jumbo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-height: 312px; }
   .strikethrough-jumbo .strikethrough {
     display: inline-block;
     position: relative;
@@ -6397,7 +6407,8 @@ body {
   background-image: url("../img/graphics/lines.svg");
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: top right; }
+  background-position: top right;
+  padding: 0 50px; }
   #hero .hero-content {
     min-height: 600px;
     align-items: flex-end;
@@ -6410,6 +6421,9 @@ body {
         font-weight: 600; }
     #hero .hero-content .hero-illustration {
       text-align: right; }
+      @media (max-width: 767.98px) {
+        #hero .hero-content .hero-illustration {
+          text-align: center; } }
       #hero .hero-content .hero-illustration svg {
         border-radius: 10px;
         max-height: 350px;
@@ -6422,7 +6436,7 @@ body {
   border: 1px solid #ced4da;
   position: relative;
   background-color: #5962ab;
-  height: 100%; }
+  min-height: 100%; }
   .service-row .col-illustration:before {
     content: "";
     display: block;
@@ -6436,13 +6450,6 @@ body {
     text-align: center;
     display: flex;
     justify-content: center; }
-
-.service-row .col-content {
-  padding: 100px 15px; }
-  .service-row .col-content .content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 430px; }
 
 #development .illustration svg {
   max-width: 80%;
@@ -6550,8 +6557,9 @@ body {
   padding: 0px;
   margin-bottom: 70px;
   white-space: nowrap; }
-  .techlist-row ul:last-child, .policylist-row ul:last-child {
-    margin-bottom: 0px; }
+  @media (max-width: 1199.98px) {
+    .techlist-row ul, .policylist-row ul {
+      white-space: normal; } }
   .techlist-row ul li, .policylist-row ul li {
     line-height: 3.5em;
     list-style: none; }
@@ -6560,16 +6568,26 @@ body {
     width: 1.5em;
     margin-right: 10px; }
 
-.policylist-row ul li:before {
-  content: '';
-  display: inline-block;
-  height: 13px;
-  width: 13px;
-  margin-right: 12px;
-  margin-bottom: -3px;
-  background-image: url("../img/icons/checkmark.svg");
-  background-size: fill;
-  background-repeat: no-repeat; }
+.techlist-row .col-lg-6:last-child {
+  transform: translateX(20px); }
+  @media (max-width: 991.98px) {
+    .techlist-row .col-lg-6:last-child {
+      transform: translateX(0px); } }
+  .techlist-row .col-lg-6:last-child ul:last-child {
+    margin-bottom: 0px; }
+
+.policylist-row ul {
+  white-space: normal; }
+  .policylist-row ul li:before {
+    content: '';
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    margin-right: 12px;
+    margin-bottom: -3px;
+    background-image: url("../img/icons/checkmark.svg");
+    background-size: fill;
+    background-repeat: no-repeat; }
 
 #about.grid-section .col-content {
   justify-content: flex-start; }

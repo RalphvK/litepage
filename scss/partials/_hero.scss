@@ -8,6 +8,7 @@ $cfg: (
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: top right;
+    padding: 0 50px;
 
     .hero-content {
 
@@ -27,6 +28,9 @@ $cfg: (
 
         .hero-illustration {
             text-align: right;
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+            }
 
             svg {
                 border-radius: 10px;

@@ -4,9 +4,9 @@
         padding: 0px;
         margin-bottom: map-get($grid-section, 'paragraph-margin');
         white-space: nowrap;
-
-        &:last-child {
-            margin-bottom: 0px;
+        
+        @include media-breakpoint-down(lg) {
+            white-space: normal;
         }
 
         li {
@@ -23,9 +23,22 @@
 
 }
 
+.techlist-row .col-lg-6:last-child {
+    transform: translateX(20px);
+    @include media-breakpoint-down(md) {
+        transform: translateX(0px);
+    }
+
+    ul:last-child {
+        margin-bottom: 0px;
+    }
+}
+
 .policylist-row {
 
     ul {
+        white-space: normal;
+
         li:before{
             content: '';
             display: inline-block;
