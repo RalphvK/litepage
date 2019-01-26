@@ -1155,17 +1155,26 @@
 
             $('#development').inView({
                 in: function () {
-                    animation.development.restart();
+                    animation.development.play();
+                },
+                out: function() {
+                    animation.development.pause();
                 }
             });
             $('#design').inView({
                 in: function () {
-                    animation.design.restart();
+                    animation.design.play();
+                },
+                out: function () {
+                    animation.design.pause();
                 }
             });
             $('#branding').inView({
                 in: function () {
-                    animation.branding.restart();
+                    animation.branding.play();
+                },
+                out: function () {
+                    animation.branding.pause();
                 }
             });
 
