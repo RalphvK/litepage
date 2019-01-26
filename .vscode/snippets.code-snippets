@@ -1,4 +1,14 @@
 {
+	"Declare_Config_Map": {
+		"prefix": "\\$cfg",
+		"scope": "scss",
+		"body": [
+			"\\$cfg: (",
+			"    '${1:property}': ${2:value}",
+			");$0",
+		],
+		"description": "Declare Config map"
+	},
 	"SCSS_Config_Map": {
 		"prefix": "cfg",
 		"scope": "scss",

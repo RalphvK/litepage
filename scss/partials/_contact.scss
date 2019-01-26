@@ -1,8 +1,12 @@
+$cfg: (
+    'gutter-width': 10px
+);
+
 #contact {
 
     .row > .col-content:last-child {
-        background-color: map-get($cfg, 'illustration-bg');
-        color: map-get($cfg, 'illustration-color');
+        background-color: map-get($grid-section, 'illustration-bg');
+        color: map-get($grid-section, 'illustration-color');
         background-image: url('../img/graphics/lines-white.svg');
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -13,6 +17,29 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+    
+    form {
+
+        margin-top: map-get($grid-section, 'paragraph-margin');
+
+        .row {
+            margin-top: 0;
+        }
+
+        .row.gutter {
+            margin-left: map-get($cfg, 'gutter-width') * -1;
+            margin-right: map-get($cfg, 'gutter-width') * -1;
+            .col-lg-6 {
+                padding-left: map-get($cfg, 'gutter-width');
+                padding-right: map-get($cfg, 'gutter-width');
+            }
+        }
+
+        .form-group.input-material {
+            margin-bottom: 0;
+            font-style: italic;
         }
     }
 

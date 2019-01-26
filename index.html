@@ -1022,6 +1022,47 @@
                     <div class="content">
                         <h3>Laten we iets moois maken!</h3>
                         <span class="subtitle">Stel een vraag, vraag om advies of vertel ons een leuk verhaal :)</span>
+                        <form id="contactform" class="container">
+                            <div class="row gutter">
+                                <div class="col-lg-6">
+                                    <div class="form-group input-material">
+                                        <input type="text" class="form-control" id="name-field" required>
+                                        <label for="name-field">Naam</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group input-material">
+                                        <input type="text" class="form-control" id="company-name-field">
+                                        <label for="company-name-field">Bedrijfsnaam (optioneel)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gutter">
+                                <div class="col-lg-6">
+                                    <div class="form-group input-material">
+                                        <input type="email" class="form-control" id="email-field" required>
+                                        <label for="email-field">Emailadres</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group input-material">
+                                        <input type="tel" class="form-control" id="phone-field">
+                                        <label for="phone-field">Telefoonnummer (optioneel)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group input-material">
+                                    <textarea class="form-control" id="message-field" rows="3" required></textarea>
+                                    <label for="message-field">Uw bericht...</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group input-material">
+                                    <button type="submit" class="btn btn-primary mt-3">Verzenden</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-3 col-content">
@@ -1068,6 +1109,9 @@
 
     <script>
         $(document).ready(function () {
+
+            // material inputs
+            $('#contactform').materializeInputs();
             
             // hero
             $('.strikethrough-jumbo').strikethroughJumbo({
