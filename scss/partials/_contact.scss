@@ -4,6 +4,12 @@ $cfg: (
 
 #contact {
 
+    // reduce padding in contact method list
+    .col-lg-3 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .row > .col-content:last-child {
         background-color: map-get($grid-section, 'illustration-bg');
         color: map-get($grid-section, 'illustration-color');

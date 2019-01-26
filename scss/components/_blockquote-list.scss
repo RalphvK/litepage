@@ -10,7 +10,7 @@ ul.blockquote-list {
     justify-content: space-between;
 
     list-style: none;
-    margin: 0 0;
+    margin: 0 auto;
     padding: 0 0;
 
     li {
@@ -20,7 +20,6 @@ ul.blockquote-list {
 
         border-left: 2px solid $white;
         padding-left: 30px;
-        margin-left: 30px;
         
         .label {
             display: block;

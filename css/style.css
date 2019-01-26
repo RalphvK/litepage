@@ -6226,13 +6226,12 @@ ul.blockquote-list {
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  margin: 0 0;
+  margin: 0 auto;
   padding: 0 0; }
   ul.blockquote-list li {
     margin-bottom: 40px;
     border-left: 2px solid #ffffff;
-    padding-left: 30px;
-    margin-left: 30px; }
+    padding-left: 30px; }
     ul.blockquote-list li:last-child {
       margin-bottom: 0px; }
     ul.blockquote-list li .label {
@@ -6786,6 +6785,10 @@ body {
 
 #about.grid-section .col-content {
   justify-content: flex-start; }
+
+#contact .col-lg-3 {
+  padding-left: 15px;
+  padding-right: 15px; }
 
 #contact .row > .col-content:last-child {
   background-color: #5962ab;
