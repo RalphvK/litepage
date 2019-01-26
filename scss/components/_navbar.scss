@@ -25,15 +25,11 @@ $logo: (
     
     &:after {
         content: '';
-        width: calc(100% - #{map-get($nav-item, 'padding-x') * 2});
+        width: calc(100% - #{map-get($nav-item, 'padding-x')});
         position: absolute;
         left: map-get($nav-item, 'padding-x');
         bottom: 0px;
         border-bottom: $thickness solid $color;
-    }
-
-    &:last-of-type:after {
-        width: calc(100% - #{map-get($nav-item, 'padding-x')});
     }
 
 }
@@ -155,16 +151,36 @@ button.hamburger {
     }
 }
 
+// tabbed menu
 @include media-breakpoint-down(sm) {
 
     .navbar {
         flex-direction: column;
         text-align: center;
 
+        padding-bottom: 0px;
+        margin-bottom: 100px;
+        background-color: $white;
+        border-bottom: 1px solid $gray-400;
+
         ul.menu {
             padding-left: 0px;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            li a {
+                padding-left: map-get($nav-item, 'padding-x');
+                padding-right: map-get($nav-item, 'padding-x');
+                
+                &:after {
+                    width: 100%;
+                    left: 0px;
+                }
+            }
         }
     }
 

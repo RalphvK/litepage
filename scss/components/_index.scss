@@ -3,9 +3,12 @@
 // 
 // all styling that is not specific to one website, i.e. reuseable, should go in the components folder
 //
+@import "mixin_gradient";
+@import "glow";
 @import "type";
 @import "buttons";
 @import "navbar";
+@import "navbar-hamburger";
 @import "blockquote-list";
 @import "input-material";
 @import "blinking-cursor";

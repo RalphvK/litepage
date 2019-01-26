@@ -42,3 +42,26 @@ $cfg: (
     }
     
 }
+
+@include media-breakpoint-down(sm) {
+
+    #hero {
+        padding: 0 0;
+
+        .container {
+            margin: 0 0;
+            max-width: 100%;
+        }
+
+        .hero-content {
+            padding: 0 55px;
+        }
+    }
+
+}
+
+@include media-breakpoint-down(xs) {
+    #hero .container .hero-content {
+        padding: 0 20px;
+    }
+}

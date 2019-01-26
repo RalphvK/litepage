@@ -1,0 +1,56 @@
+// hamburger
+@import 'vendor/hamburgers/hamburgers';
+
+@include media-breakpoint-down(xs) {
+
+    .navbar {
+        padding: 22px 0;
+        flex-direction: row;
+        text-align: center;
+        
+        @include gradient(rgba($white, 1), rgba($white, 0), vertical);
+        margin-bottom: 0px;
+        padding-bottom: 100px;
+        border: none;
+
+        .logo {
+            padding-left: 20px;
+            padding-top: 5px;
+        }
+
+        button.hamburger {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            display: block;
+            padding-top: 28px;
+        }
+
+        ul.menu {
+            display: block;
+            max-height: 0px;
+            margin: 0 0;
+            overflow: hidden;
+            border-bottom: none;
+            transition: all 0.5s ease;
+
+            li {
+                display: block;
+                border-bottom: 1px solid $gray-200;
+                &:first-child {
+                    border-top: 1px solid $gray-200;
+                }
+            }
+        }
+
+        ul.menu.is-active {
+            padding-top: 50px;
+            padding-bottom: 100px;
+            max-height: 1920px;
+            background-color: white;
+            border-bottom: 1px solid $gray-400;
+        }
+
+    }
+
+}
