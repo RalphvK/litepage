@@ -1,6 +1,7 @@
 function designAnimation(selector = "#design-animation") {
     var tl = anime.timeline({
-        loop: false
+        loop: false,
+        autoplay: false
     });
 
     // mobile hero
@@ -168,4 +169,6 @@ function designAnimation(selector = "#design-animation") {
         scale: 0.7,
         duration: 1000
     }, '-=900');
+
+    return tl;
 }

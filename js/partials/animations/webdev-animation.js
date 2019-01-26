@@ -10,7 +10,8 @@ function webdevAnimation(selector = "#webdev-animation") {
     };
 
     var tl = anime.timeline({
-        loop: true
+        loop: true,
+        autoplay: false
     });
 
     // code
@@ -73,4 +74,6 @@ function webdevAnimation(selector = "#webdev-animation") {
             { value: 1, duration: 1000 }
         ]
     });
+
+    return tl;
 }

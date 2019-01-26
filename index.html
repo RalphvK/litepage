@@ -1147,9 +1147,27 @@
             bloatAnimation();
 
             // services
-            webdevAnimation();
-            designAnimation();
-            brandingAnimation();
+            var animation = {
+                development: webdevAnimation(),
+                design: designAnimation(),
+                branding: brandingAnimation()
+            }
+
+            $('#development').inView({
+                in: function () {
+                    animation.development.restart();
+                }
+            });
+            $('#design').inView({
+                in: function () {
+                    animation.design.restart();
+                }
+            });
+            $('#branding').inView({
+                in: function () {
+                    animation.branding.restart();
+                }
+            });
 
         });
     </script>

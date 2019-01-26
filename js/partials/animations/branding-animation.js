@@ -1,6 +1,7 @@
 function brandingAnimation(selector = "#branding-animation") {
     var tl = anime.timeline({
-        loop: false
+        loop: false,
+        autoplay: false
     });
 
     // logo drawing
@@ -104,4 +105,6 @@ function brandingAnimation(selector = "#branding-animation") {
         delay: anime.stagger(250),
         endDelay: 2000
     }, '-=1000');
+
+    return tl;
 }

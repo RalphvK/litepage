@@ -404,4 +404,6 @@ function bloatAnimation(selector = "#bloat-animation") {
         easing: 'linear'
     }, config.loadingTime - 2000);
 
+    return tl;
+
 }

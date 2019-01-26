@@ -11,6 +11,44 @@ function toggleMenu() {
     $('#main-nav ul.menu').toggleClass('is-active');
     $('#main-nav .hamburger').toggleClass('is-active');
 }
+$.fn.isInView = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$.fn.inView = function (options) {
+    // parsing options
+    var defaults = {
+        in: function() {},
+        out: function () {}
+    };
+    var callback = Object.assign(defaults, options);
+
+    // persistent variables
+    var element = $(this);
+    var inView = false; // state
+
+    // update function to check if in view and execute callbacks
+    function update() {
+        // check for change
+        var newState = element.isInView();
+        if (inView !== newState) {
+            inView = newState;
+            inView ? callback.in() : callback.out();
+        }
+    }
+    update(); // run on execution
+
+    // run on change
+    $(window).on('resize scroll', function () {
+        update();
+    });
+};
 $.fn.materializeInputs = function(selectors) {
 
     // default param with backwards compatibility
@@ -584,10 +622,13 @@ function bloatAnimation(selector = "#bloat-animation") {
         easing: 'linear'
     }, config.loadingTime - 2000);
 
+    return tl;
+
 }
 function brandingAnimation(selector = "#branding-animation") {
     var tl = anime.timeline({
-        loop: false
+        loop: false,
+        autoplay: false
     });
 
     // logo drawing
@@ -691,10 +732,13 @@ function brandingAnimation(selector = "#branding-animation") {
         delay: anime.stagger(250),
         endDelay: 2000
     }, '-=1000');
+
+    return tl;
 }
 function designAnimation(selector = "#design-animation") {
     var tl = anime.timeline({
-        loop: false
+        loop: false,
+        autoplay: false
     });
 
     // mobile hero
@@ -862,6 +906,8 @@ function designAnimation(selector = "#design-animation") {
         scale: 0.7,
         duration: 1000
     }, '-=900');
+
+    return tl;
 }
 function webdevAnimation(selector = "#webdev-animation") {
     var code = {
@@ -875,7 +921,8 @@ function webdevAnimation(selector = "#webdev-animation") {
     };
 
     var tl = anime.timeline({
-        loop: true
+        loop: true,
+        autoplay: false
     });
 
     // code
@@ -938,4 +985,6 @@ function webdevAnimation(selector = "#webdev-animation") {
             { value: 1, duration: 1000 }
         ]
     });
+
+    return tl;
 }
