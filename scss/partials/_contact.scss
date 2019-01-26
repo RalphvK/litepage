@@ -13,10 +13,7 @@ $cfg: (
     .row > .col-content:last-child {
         background-color: map-get($grid-section, 'illustration-bg');
         color: map-get($grid-section, 'illustration-color');
-        background-image: url('../img/graphics/lines-white.svg');
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: top right;
+        @include lines-background('../img/graphics/lines-white.svg');
 
         a {
             color: white;

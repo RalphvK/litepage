@@ -1,0 +1,6 @@
+@mixin lines-background($url: '../img/graphics/lines.svg') {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top right;
+}

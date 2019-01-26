@@ -1,0 +1,24 @@
+$cfg: (
+    'row-margin': 100px
+);
+
+#credits {
+    padding-top: map-get($cfg, 'row-margin');
+    padding-bottom: map-get($cfg, 'row-margin') * 0.75;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: 700;
+
+    img {
+        height: 1.4em;
+        margin-left: 2px;
+    }
+
+    .subtitle {
+        display: block;
+        font-weight: 600;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+}

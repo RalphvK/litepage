@@ -4,10 +4,7 @@ $cfg: (
 
 #hero {
 
-    background-image: url('../img/graphics/lines.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: top right;
+    @include lines-background();
     padding: 0 50px;
 
     .hero-content {
