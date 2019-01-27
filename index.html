@@ -983,29 +983,29 @@
                             <div class="col-lg-6">
                                 <strong>FRONT-END</strong>
                                 <ul>
-                                    <li><img src="img/icons/html5.svg" alt="HTML 5">HTML 5</li>
-                                    <li><img src="img/icons/css3.svg" alt="CSS 3">CSS 3</li>
-                                    <li><img src="img/icons/sass.svg" alt="SCSS">SCSS</li>
-                                    <li><img src="img/icons/es6.svg" alt="Javascript (ES6)">Javascript (ES6)</li>
-                                    <li><img src="img/icons/jquery.svg" alt="jQuery">jQuery</li>
-                                    <li><img src="img/icons/vue.svg" alt="Vue.js">Vue.js</li>
-                                    <li><img src="img/icons/bootstrap.svg" alt="Bootstrap">Bootstrap</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/html5.svg" alt="HTML 5">HTML 5</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/css3.svg" alt="CSS 3">CSS 3</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/sass.svg" alt="SCSS">SCSS</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/es6.svg" alt="Javascript (ES6)">Javascript (ES6)</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/jquery.svg" alt="jQuery">jQuery</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/vue.svg" alt="Vue.js">Vue.js</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/bootstrap.svg" alt="Bootstrap">Bootstrap</li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <strong>UTILITIES</strong>
                                 <ul>
-                                    <li><img src="img/icons/git.svg" alt="Git">Git</li>
-                                    <li><img src="img/icons/npm.svg" alt="Node NPM">Node NPM</li>
-                                    <li><img src="img/icons/gulp.svg" alt="Gulp">Gulp</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/git.svg" alt="Git">Git</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/npm.svg" alt="Node NPM">Node NPM</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/gulp.svg" alt="Gulp">Gulp</li>
                                 </ul>
                                 <strong>BACK-END</strong>
                                 <ul>
-                                    <li><img src="img/icons/php.svg" alt="PHP">PHP</li>
-                                    <li><img src="img/icons/github.svg" alt="Klein.php">Klein.php</li>
-                                    <li><img src="img/icons/laravel.svg" alt="Laravel">Laravel</li>
-                                    <li><img src="img/icons/wordpress.svg" alt="Wordpress">Wordpress<span class="text-muted"> + Woocommerce</span></li>
-                                    <li><img src="img/icons/ghost.svg" alt="Ghost">Ghost<span class="text-muted"> + Jekyll / Gatsby</span></li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/php.svg" alt="PHP">PHP</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/github.svg" alt="Klein.php">Klein.php</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/laravel.svg" alt="Laravel">Laravel</li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/wordpress.svg" alt="Wordpress">Wordpress<span class="text-muted"> + Woocommerce</span></li>
+                                    <li><img class="leisurely" src="img/icons/placeholder.svg" data-src="img/icons/ghost.svg" alt="Ghost">Ghost<span class="text-muted"> + Jekyll / Gatsby</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1178,6 +1178,11 @@
                     animation.branding.pause();
                 },
                 threshold: 300
+            });
+
+            // leisurely
+            leisurely({
+                elements: document.querySelectorAll(".leisurely")
             });
 
         });
