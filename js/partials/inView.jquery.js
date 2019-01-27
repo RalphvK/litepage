@@ -1,20 +1,21 @@
-$.fn.isInView = function () {
+$.fn.isInView = function (threshold = 0) {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
 
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
 
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+    return elementBottom > viewportTop + threshold && elementTop < viewportBottom - threshold;
 };
 
 $.fn.inView = function (options) {
     // parsing options
     var defaults = {
         in: function() {},
-        out: function () {}
+        out: function () {},
+        threshold: 0
     };
-    var callback = Object.assign(defaults, options);
+    var options = Object.assign(defaults, options);
 
     // persistent variables
     var element = $(this);
@@ -23,10 +24,10 @@ $.fn.inView = function (options) {
     // update function to check if in view and execute callbacks
     function update() {
         // check for change
-        var newState = element.isInView();
+        var newState = element.isInView(options.threshold);
         if (inView !== newState) {
             inView = newState;
-            inView ? callback.in() : callback.out();
+            inView ? options.in() : options.out();
         }
     }
     update(); // run on execution
