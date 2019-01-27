@@ -6941,6 +6941,8 @@ body {
     text-align: center;
     display: flex;
     justify-content: center; }
+    .service-row .col-illustration .illustration svg {
+      width: 100%; }
 
 #development .illustration svg {
   max-width: 80%;

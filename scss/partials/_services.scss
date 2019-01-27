@@ -24,6 +24,10 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
             text-align: center;
             display: flex;
             justify-content: center;
+
+            svg {
+                width: 100%;
+            }
         }
 
     }
