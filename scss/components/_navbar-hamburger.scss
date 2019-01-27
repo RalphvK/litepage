@@ -3,7 +3,7 @@
 
 @include media-breakpoint-down(xs) {
 
-    .navbar {
+    .navbar.hamburger-menu {
         padding: 22px 0;
         flex-direction: row;
         text-align: center;

@@ -6467,7 +6467,7 @@ button.hamburger {
     transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 @media (max-width: 575.98px) {
-  .navbar {
+  .navbar.hamburger-menu {
     padding: 22px 0;
     flex-direction: row;
     text-align: center;
@@ -6477,28 +6477,28 @@ button.hamburger {
     margin-bottom: 0px;
     padding-bottom: 100px;
     border: none; }
-    .navbar .logo {
+    .navbar.hamburger-menu .logo {
       padding-left: 20px;
       padding-top: 5px; }
-    .navbar button.hamburger {
+    .navbar.hamburger-menu button.hamburger {
       position: absolute;
       top: 0px;
       right: 0px;
       display: block;
       padding-top: 28px; }
-    .navbar ul.menu {
+    .navbar.hamburger-menu ul.menu {
       display: block;
       max-height: 0px;
       margin: 0 0;
       overflow: hidden;
       border-bottom: none;
       transition: all 0.5s ease; }
-      .navbar ul.menu li {
+      .navbar.hamburger-menu ul.menu li {
         display: block;
         border-bottom: 1px solid #e9ecef; }
-        .navbar ul.menu li:first-child {
+        .navbar.hamburger-menu ul.menu li:first-child {
           border-top: 1px solid #e9ecef; }
-    .navbar ul.menu.is-active {
+    .navbar.hamburger-menu ul.menu.is-active {
       padding-top: 50px;
       padding-bottom: 100px;
       max-height: 1920px;
