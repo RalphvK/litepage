@@ -6904,6 +6904,7 @@ body {
           text-align: center; } }
       #hero .hero-content .hero-illustration svg {
         border-radius: 10px;
+        height: 100%;
         max-height: 350px;
         margin-bottom: -30px;
         -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 123, 255, 0.3);
