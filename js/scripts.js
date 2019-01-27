@@ -54,7 +54,6 @@ var leisurely = function(options) {
     // parsing options
     var defaults = {
         elements: null,
-        type: 'image',
         interval: 100
     };
     var options = Object.assign(defaults, options);
