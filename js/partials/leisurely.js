@@ -55,6 +55,8 @@ var leisurely = function(options) {
             success: function (data) {
                 $(element).replaceWith(data);
                 onload();
+            },
+            complete: function () {
                 loadNext();
             }
         });
