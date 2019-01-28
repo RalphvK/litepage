@@ -6888,7 +6888,7 @@ body {
   background-position: top right;
   padding: 0 50px; }
   #hero .hero-content {
-    min-height: 600px;
+    min-height: 650px;
     align-items: flex-end;
     padding-bottom: 100px; }
     #hero .hero-content .title {
@@ -6906,7 +6906,6 @@ body {
         border-radius: 10px;
         height: 100%;
         max-height: 350px;
-        margin-bottom: -30px;
         -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 89, 255, 0.3);
         -moz-box-shadow: 0px 0px 60px 0px rgba(0, 89, 255, 0.3);
         box-shadow: 0px 0px 60px 0px rgba(0, 89, 255, 0.3); }
