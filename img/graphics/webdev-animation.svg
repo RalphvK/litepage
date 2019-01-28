@@ -13,7 +13,7 @@
             <stop offset="1" stop-color="gray" stop-opacity="0.1" />
         </linearGradient>
     </defs>
-    <title>Illustration webdev-01</title>
+    <title>Animation of code appearing on a screen, then switching to a browser window where the programmed elements appear on by one.</title>
     <ellipse cx="392.85" cy="504.19" rx="207.15" ry="7.95" style="fill:#6c63ff;opacity:0.100000001490116;isolation:isolate" />
     <path d="M410.4,491.71v4.81H267.93v-3.88a46.84,46.84,0,0,0,3.2-86.55H409.42a46.86,46.86,0,0,0,1,85.62Z" transform="translate(0 1.7)"
                                 style="fill:#c8cad7" />
