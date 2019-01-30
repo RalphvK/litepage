@@ -5,7 +5,7 @@
 
     .navbar.hamburger-menu {
         padding: 22px 0;
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         
         @include gradient(rgba($white, 1), rgba($white, 0), vertical);

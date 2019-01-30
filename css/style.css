@@ -4782,7 +4782,7 @@ button.hamburger {
 @media (max-width: 575.98px) {
   .navbar.hamburger-menu {
     padding: 22px 0;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     background: white;
     background: -webkit-linear-gradient(top, white, rgba(255, 255, 255, 0));
