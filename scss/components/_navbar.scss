@@ -1,7 +1,7 @@
 $nav-item: (
     'padding-x': 60px,
     'padding-y': 0px,
-    'border-radius': 999px,
+    'border-radius': 5px,
     'color': $black,
     'inverse-color': $gray-400
 );
@@ -20,16 +20,18 @@ $logo: (
     $thickness: 2px,
     ){
 
-    text-decoration: none;
-    position: relative;
-    
-    &:after {
-        content: '';
-        width: calc(100% - #{map-get($nav-item, 'padding-x')});
-        position: absolute;
-        left: map-get($nav-item, 'padding-x');
-        bottom: 0px;
-        border-bottom: $thickness solid $color;
+    &:hover, &.active {
+        text-decoration: none;
+        position: relative;
+        
+        &:after {
+            content: '';
+            width: calc(100% - #{map-get($nav-item, 'padding-x')});
+            position: absolute;
+            left: map-get($nav-item, 'padding-x');
+            bottom: 0px;
+            border-bottom: $thickness solid $color;
+        }
     }
 
 }
@@ -39,18 +41,37 @@ $logo: (
     $thickness: 2px,
     ){
 
-    text-decoration: none;
-    position: relative;
-    
-    &:after {
-        content: '';
-        width: calc(100% - #{map-get($nav-item, 'padding-x') * 2});
-        position: absolute;
-        left: map-get($nav-item, 'padding-x');
-        bottom: 0px;
-        border-top: $thickness solid $color;
+    &:hover, &.active {
+        text-decoration: none;
+        position: relative;
+        
+        &:after {
+            content: '';
+            width: calc(100% - #{map-get($nav-item, 'padding-x') * 2});
+            position: absolute;
+            left: map-get($nav-item, 'padding-x');
+            bottom: 0px;
+            border-top: $thickness solid $color;
+        }
     }
 
+}
+
+@mixin navbar_button(
+    $background-color: $primary,
+    $hover-color: $white,
+    $padding: 0px 30px
+){
+    padding: $padding;
+    transition: all 0.25s ease;
+
+    &:hover, &.active {
+        text-decoration: none;
+        background-color: rgba($background-color, 0.5);
+        padding: $padding;
+        color: $hover-color;
+        @include glow($primary, 0.5, 30px);
+    }
 }
 
 .navbar {
@@ -87,17 +108,16 @@ ul.menu {
             font-weight: 600;
             color: map-get($nav-item, 'color');
             text-transform: uppercase;
-            font-size: 0.8em;
+            font-size: 0.75em;
             letter-spacing: 1px;
             border-radius: map-get($nav-item, 'border-radius');
-
-            &:last-of-type {
-                padding-right: 0px;
-            }
+            @include smooth();
             
-            &:hover, &.active {
-                @include navbar_underline_border($thickness: 2px);
-            }
+            @include navbar_button();
+        }
+
+        &:last-child a {
+            margin-right: -30px;
         }
         
         &.lang-item {
@@ -162,6 +182,11 @@ button.hamburger {
         margin-bottom: 100px;
         background-color: $white;
         border-bottom: 1px solid $gray-400;
+
+        .logo {
+            padding: 0 0 0 0;
+            margin-bottom: 10px;
+        }
 
         ul.menu {
             padding-left: 0px;

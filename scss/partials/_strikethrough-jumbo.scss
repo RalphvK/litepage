@@ -20,12 +20,7 @@ $cfg: (
     font-weight: 600;
     font-size: 1em;
     opacity: 0.8;
-    /* Smoothing */
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    @include smooth();
   }
   .strikethrough s {
     position: absolute;
