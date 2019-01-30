@@ -4782,8 +4782,8 @@ button.hamburger {
 @media (max-width: 575.98px) {
   .navbar.hamburger-menu {
     padding: 22px 0;
-    flex-direction: row;
-    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
     background: white;
     background: -webkit-linear-gradient(top, white, rgba(255, 255, 255, 0));
     background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
@@ -4798,14 +4798,16 @@ button.hamburger {
       top: 0px;
       right: 0px;
       display: block;
-      padding-top: 28px; }
+      padding-top: 28px;
+      padding-right: 18px; }
     .navbar.hamburger-menu ul.menu {
       display: block;
       max-height: 0px;
       margin: 0 0;
       overflow: hidden;
       border-bottom: none;
-      transition: all 0.5s ease; }
+      transition: all 0.5s ease;
+      text-align: center; }
       .navbar.hamburger-menu ul.menu li {
         display: block;
         border-bottom: 1px solid #e9ecef; }

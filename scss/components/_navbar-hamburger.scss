@@ -5,8 +5,8 @@
 
     .navbar.hamburger-menu {
         padding: 22px 0;
-        flex-direction: row;
-        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
         
         @include gradient(rgba($white, 1), rgba($white, 0), vertical);
         margin-bottom: 0px;
@@ -24,6 +24,7 @@
             right: 0px;
             display: block;
             padding-top: 28px;
+            padding-right: 18px;
         }
 
         ul.menu {
@@ -33,6 +34,7 @@
             overflow: hidden;
             border-bottom: none;
             transition: all 0.5s ease;
+            text-align: center;
 
             li {
                 display: block;
