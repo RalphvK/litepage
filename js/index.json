@@ -1,5 +1,7 @@
 {
     "includes": [
+        "./js/partials/vendor/parsley.js",
+        "./js/partials/vendor/parsley-nl.js",
         "./js/partials/vendor/*.js",
         "./js/partials/**/*.js"
     ]

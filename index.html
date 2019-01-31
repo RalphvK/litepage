@@ -414,16 +414,36 @@
                         <h3>Laten we iets moois maken!</h3>
                         <span class="subtitle">Stel een vraag, vraag om advies of vertel ons een leuk verhaal :)</span>
                         <form id="contactform" class="container">
+                            <svg id="envelope-animation" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 542.86">
+                                <title>envelope</title>
+                                <rect id="stripe-bg" y="502.86" width="1080" height="40" style="fill:#fff" />
+                                <g id="flap">
+                                    <polygon points="540 0 0 502.86 1080 502.86 540 0" style="fill:#fff" />
+                                </g>
+                                <g id="stripes">
+                                    <polygon points="73.25 502.86 0 540.34 0 512.03 17.92 502.86 73.25 502.86" style="fill:#940210" />
+                                    <polygon points="212.08 502.86 133.91 542.86 78.6 542.86 156.77 502.86 212.08 502.86" style="fill:#0b576e" />
+                                    <polygon points="350.91 502.86 272.74 542.86 217.43 542.86 295.6 502.86 350.91 502.86" style="fill:#940210" />
+                                    <polygon points="489.75 502.86 411.58 542.86 356.27 542.86 434.43 502.86 489.75 502.86" style="fill:#0b576e" />
+                                    <polygon points="628.59 502.86 550.42 542.86 495.12 542.86 573.29 502.86 628.59 502.86" style="fill:#940210" />
+                                    <polygon points="767.42 502.86 689.25 542.86 633.95 542.86 712.12 502.86 767.42 502.86" style="fill:#0b576e" />
+                                    <polygon points="906.26 502.86 828.09 542.86 772.78 542.86 850.95 502.86 906.26 502.86" style="fill:#940210" />
+                                    <polygon points="1045.1 502.86 966.93 542.86 911.63 542.86 989.79 502.86 1045.1 502.86" style="fill:#0b576e" />
+                                    <polygon points="1080 527.75 1080 542.86 1050.47 542.86 1080 527.75" style="fill:#940210" />
+                                </g>
+                            </svg>
+                            <div id="shadow"></div>
+
                             <div class="row gutter">
                                 <div class="col-lg-6">
                                     <div class="form-group input-material">
-                                        <input type="text" class="form-control" id="name-field" required>
+                                        <input type="text" class="form-control" id="name-field" name="name" minlength="2" maxlength="200" required>
                                         <label for="name-field">Naam</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group input-material">
-                                        <input type="text" class="form-control" id="company-name-field">
+                                        <input type="text" class="form-control" id="company-name-field" maxlength="200" name="company">
                                         <label for="company-name-field">Bedrijfsnaam (optioneel)</label>
                                     </div>
                                 </div>
@@ -431,20 +451,20 @@
                             <div class="row gutter">
                                 <div class="col-lg-6">
                                     <div class="form-group input-material">
-                                        <input type="email" class="form-control" id="email-field" required>
+                                        <input type="email" class="form-control" id="email-field" name="email" maxlength="254" required>
                                         <label for="email-field">Emailadres</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group input-material">
-                                        <input type="tel" class="form-control" id="phone-field">
+                                        <input type="tel" class="form-control" id="phone-field" maxlength="50" name="phone">
                                         <label for="phone-field">Telefoonnummer (optioneel)</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col form-group input-material">
-                                    <textarea class="form-control" id="message-field" rows="3" required></textarea>
+                                    <textarea class="form-control" id="message-field" rows="3" name="message" minlength="10" required></textarea>
                                     <label for="message-field">Uw bericht...</label>
                                 </div>
                             </div>
@@ -454,6 +474,7 @@
                                 </div>
                             </div>
                         </form>
+                        <div id="thankyou-message">Bedankt voor uw bericht! We laten snel van ons horen!</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-content">
@@ -511,6 +532,28 @@
         </div>
     </footer> -->
 
+    <!-- Modal -->
+    <div class="modal fade error-modal" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalTitle">Er is een onbekende fout opgetreden!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Probeer het nogmaals of stuur een email via <a href="mailto:contact@litepage.nl">contact@litepage.nl</a>.</p>
+                    <p>Kun je het ons vergeven? :(</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -521,8 +564,16 @@
     <script>
         $(document).ready(function () {
 
-            // material inputs
-            $('#contactform').materializeInputs();
+            // contact form
+            var contactForm = $('#contactform');
+            contactForm.materializeInputs();
+            contactForm.parsley().on('form:submit', function () {
+                // submit form
+                contactForm.postForm({ url: 'https://forms.ravk.nl/form/21ece5ec73d7998e8669fb4a32cbafbe' });
+                // cancel default submit
+                return false;
+            });
+            animation.envelopeInit();
             
             // hero
             $('.strikethrough-jumbo').strikethroughJumbo({

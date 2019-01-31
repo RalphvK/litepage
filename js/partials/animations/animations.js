@@ -38,6 +38,10 @@ var animation = {
             },
             threshold: 300
         });
+    },
+
+    envelopeInit: function () {
+        this.envelope = envelopeAnimation();
     }
 
 };

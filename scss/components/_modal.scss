@@ -1,0 +1,26 @@
+.error-modal {
+
+    h5 {
+        color: $white;
+    }
+
+    .modal-content {
+        font-size: 1em;
+        font-weight: 600;
+        color: $white;
+        background-color: lighten($danger, 15%);
+    }
+
+    a {
+        color: $alternative;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid lighten($danger, 30%);
+    }
+
+    .modal-footer {
+        border-top: 1px solid lighten($danger, 30%);
+    }
+
+}
