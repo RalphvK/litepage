@@ -26,6 +26,14 @@ function envelopeAnimation(selector = "#envelope-animation") {
         ],
         easing: 'easeInOutSine'
     }, '-=700');
+    tl.add({
+        targets: '#contactform .row',
+        scale: [
+            { value: '1', duration: 0 },
+            { value: '0.8', duration: 1000 }
+        ],
+        easing: 'easeInOutSine'
+    }, '-=1000');
 
     // zoom and fade
     tl.add({
