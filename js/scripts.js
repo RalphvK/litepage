@@ -2740,6 +2740,10 @@ function strikethroughJumbo(element, options) {
             { value: 0, duration: 0 },
             { value: config.maxHeight, duration: animDuration() }
         ],
+        opacity: [
+            { value: 1, duration: 0, delay: anime.stagger(1000) },
+            { value: 0.4, duration: 3000 },
+        ],
         delay: anime.stagger(animDuration()),
         easing: 'cubicBezier(.6, 0, .1, 1)'
     }, 0);
@@ -2759,9 +2763,9 @@ function strikethroughJumbo(element, options) {
     tl.add({
         targets: element.querySelectorAll('.title h2'),
         clipPath: [
-            { value: 'inset(0 100% 0 0)', duration: 0, delay: 500 },
-            { value: 'inset(0 50% 0 0)', duration: 0, delay: 500 },
-            { value: 'inset(0 0% 0 0)', duration: 0 },
+            { value: 'inset(0 100% -10% 0)', duration: 0, delay: 500 },
+            { value: 'inset(0 48% -10% 0)', duration: 0, delay: 500 },
+            { value: 'inset(0 0% -10% 0)', duration: 0 },
         ],
         easing: 'linear'
     }, config.strikeDelay);
