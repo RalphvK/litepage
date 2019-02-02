@@ -7,6 +7,10 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
         position: relative;
         background-color: map-get($cfg, 'illustration-bg');
         min-height: 100%;
+        
+        @include media-breakpoint-only(md) {
+            max-height: 400px;
+        }
 
         // square aspect ratio
         &:before{
@@ -57,4 +61,32 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
         max-width: 80%;
     }
 
+    @include media-breakpoint-down(md) {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+// put illustration after text on mobile
+@include media-breakpoint-down(md) {
+    #development, #branding {
+        .row {
+            flex-direction: column-reverse;
+        }
+
+        .col-content {
+
+            // removing adjacent border
+            &:nth-child(even) {
+                @include media-breakpoint-down(md) {
+                    border-top: map-get($grid-section, 'column-border');
+                    border-bottom: none;
+                }
+            
+            }
+
+        }
+    }
 }

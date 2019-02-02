@@ -9,6 +9,24 @@ $grid-section: (
     'content-margin-mobile': 10%
 );
 
+@mixin remove-double-border() {
+    .col-content {
+
+        // removing adjacent border
+        &:nth-child(even) {
+        
+            @include media-breakpoint-up(lg) {
+                border-left: none;
+            }
+            @include media-breakpoint-down(md) {
+                border-top: none;
+            }
+        
+        }
+
+    }
+}
+
 .grid-section {
 
     margin-top: map-get($grid-section, 'section-margin');
@@ -51,19 +69,6 @@ $grid-section: (
         }
     }
 
-    .col-content {
+    @include remove-double-border();
 
-        // removing adjacent border
-        &:nth-child(even) {
-        
-            @include media-breakpoint-up(lg) {
-                border-left: none;
-            }
-            @include media-breakpoint-down(md) {
-                border-top: none;
-            }
-        
-        }
-
-    }
 }

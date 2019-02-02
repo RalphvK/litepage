@@ -5313,6 +5313,9 @@ body {
   position: relative;
   background-color: #5962ab;
   min-height: 100%; }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .service-row .col-illustration {
+      max-height: 400px; } }
   .service-row .col-illustration:before {
     content: "";
     display: block;
@@ -5338,6 +5341,19 @@ body {
 
 #branding .illustration svg {
   max-width: 80%; }
+
+@media (max-width: 991.98px) {
+  #branding .row {
+    flex-direction: column-reverse; } }
+
+@media (max-width: 991.98px) {
+  #development .row, #branding .row {
+    flex-direction: column-reverse; } }
+
+@media (max-width: 991.98px) and (max-width: 991.98px) {
+  #development .col-content:nth-child(even), #branding .col-content:nth-child(even) {
+    border-top: 1px solid #ced4da;
+    border-bottom: none; } }
 
 #webdev-animation * {
   transform-box: fill-box; }
