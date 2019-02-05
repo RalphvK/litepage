@@ -24,12 +24,13 @@ $cfg: (
         }
 
         .hero-illustration {
+            position: relative;
             text-align: right;
             @include media-breakpoint-down(sm) {
                 text-align: center;
             }
 
-            svg {
+            svg.hero-animation {
                 border-radius: 10px;
                 height: 100%;
                 max-height: 350px;
@@ -37,6 +38,13 @@ $cfg: (
                 -webkit-box-shadow: map-get($cfg, 'shadow');
                 -moz-box-shadow: map-get($cfg, 'shadow');
                 box-shadow: map-get($cfg, 'shadow');
+            }
+
+            #explainer-arrow {
+                position: absolute;
+                height: 80px;
+                left: 100px;
+                top: 100%;
             }
         }
 
