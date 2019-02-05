@@ -4610,8 +4610,7 @@ mixins
 
 .display-text, .btn {
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  text-transform: uppercase; }
 
 .subtitle {
   font-weight: 600;
@@ -4655,7 +4654,6 @@ p {
 :root .btn {
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8em;

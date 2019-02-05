@@ -3,7 +3,7 @@
     @if($uppercase) {
         text-transform: uppercase;
     }
-    letter-spacing: 2px;
+    // letter-spacing: 2px;
 }
 .display-text {
     @include display-text();
