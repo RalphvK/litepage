@@ -5146,6 +5146,9 @@ ul.blockquote-list {
 .error-modal .modal-footer {
   border-top: 1px solid #f3b7bd; }
 
+.inline-icon {
+  height: 0.9em; }
+
 body {
   position: relative !important; }
 
@@ -5461,17 +5464,17 @@ body {
   .techlist-row ul li, .policylist-row ul li {
     line-height: 3.5em;
     list-style: none; }
-  .techlist-row ul img, .policylist-row ul img {
-    height: 1.5em;
-    width: 1.5em;
-    margin-right: 10px; }
+    .techlist-row ul li > img, .policylist-row ul li > img {
+      height: 1.5em;
+      width: 1.5em;
+      margin-right: 10px; }
 
-.techlist-row .col-lg-6:last-child {
+.techlist-row .col-sm-6:last-child {
   transform: translateX(20px); }
   @media (max-width: 991.98px) {
-    .techlist-row .col-lg-6:last-child {
+    .techlist-row .col-sm-6:last-child {
       transform: translateX(0px); } }
-  .techlist-row .col-lg-6:last-child ul:last-child {
+  .techlist-row .col-sm-6:last-child ul:last-child {
     margin-bottom: 0px; }
 
 .policylist-row ul {
