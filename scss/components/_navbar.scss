@@ -7,8 +7,9 @@ $nav-item: (
 );
 
 $logo: (
-    'height': 45px,
-    'padding': 0 10px 0 0
+    'height':50px,
+    'padding': 0 10px 0 0,
+    'margin-top': -11px
 );
 
 @mixin navbar_underline(){
@@ -84,6 +85,7 @@ $logo: (
     .logo {
         padding: map-get($logo, 'padding');
         height: map-get($logo, 'height');
+        margin-top: map-get($logo, 'margin-top');
         display: inline-block;
 
         .cls-primary {
