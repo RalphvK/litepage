@@ -69,6 +69,11 @@ var typeWriter = {
 // jQuery plugin
 $.fn.typeWriter = function (options) {
 
+    // if no element
+    if (!this[0]) {
+        return false;
+    }
+
     // parsing options
     var defaults = {
         delay: 50,
