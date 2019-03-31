@@ -1,6 +1,6 @@
 $grid-section: (
     'content-bg': $white,
-    'illustration-bg': $alternative,
+    'illustration-bg': $primary-strong, // no longer used
     'illustration-color': $white,
     'section-margin': 200px,
     'column-border': map-get($columnLines, 'border'),
@@ -29,8 +29,8 @@ $grid-section: (
 
 .grid-section {
 
-    margin-top: map-get($grid-section, 'section-margin');
-    margin-bottom: map-get($grid-section, 'section-margin');
+    padding-top: map-get($grid-section, 'section-margin');
+    padding-bottom: map-get($grid-section, 'section-margin');
 
     .row {
         justify-content: stretch;

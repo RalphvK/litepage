@@ -179,10 +179,8 @@ button.hamburger {
     .navbar {
         flex-direction: column;
         text-align: center;
-
         padding-bottom: 0px;
         margin-bottom: 100px;
-        background-color: $white;
         border-bottom: 1px solid $gray-400;
 
         .logo {
@@ -202,6 +200,7 @@ button.hamburger {
             li a {
                 padding-left: map-get($nav-item, 'padding-x');
                 padding-right: map-get($nav-item, 'padding-x');
+                margin-right: 0px;
                 
                 &:after {
                     width: 100%;

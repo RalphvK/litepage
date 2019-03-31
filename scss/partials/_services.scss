@@ -2,10 +2,12 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
 
 .service-row {
 
+    background-color: rgba(#0000ff, 0.73);
+    padding-top: 0;
+    padding-bottom: 0;
+
     .col-illustration {
-        border: map-get($cfg, 'column-border');
         position: relative;
-        background-color: map-get($cfg, 'illustration-bg');
         min-height: 100%;
         
         @include media-breakpoint-only(md) {
@@ -36,6 +38,12 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
 
     }
 
+    .col-content {
+        border: none !important;
+        background-color: transparent;
+        color: $white;
+    }
+
 }
 
 #development {
@@ -51,19 +59,20 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
 
     .illustration svg {
         max-width: 80%;
+        > rect {
+            fill: none !important;
+        }
     }
 
 }
 
 #branding {
+    padding-bottom: map-get($grid-section, 'section-margin') * 0.5;
 
     .illustration svg {
         max-width: 80%;
-    }
-
-    @include media-breakpoint-down(md) {
-        .row {
-            flex-direction: column-reverse;
+        > rect {
+            fill: none !important;
         }
     }
 
@@ -71,7 +80,14 @@ $cfg: $grid-section; // copy config from grid-section (not using $grid-section t
 
 // put illustration after text on mobile
 @include media-breakpoint-down(md) {
-    #development, #branding {
+
+    .service-row.grid-section .col-content {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    #design {
         .row {
             flex-direction: column-reverse;
         }
