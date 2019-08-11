@@ -2701,7 +2701,7 @@ $.fn.postForm = function (ajaxOptions) {
         processData: false,
         contentType: false,
         type: 'POST',
-        success: function (data) {
+        complete: function (data) {
             formResponse(jqObj, data);
         }
     };

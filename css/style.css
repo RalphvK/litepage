@@ -5147,18 +5147,26 @@ ul.blockquote-list {
 
 .error-modal .modal-content {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
-  background-color: #e77681; }
+  background-color: #dc3545; }
+  .error-modal .modal-content p {
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    font-weight: 500; }
 
 .error-modal a {
-  color: #5962ab; }
+  color: #d6d6ff;
+  text-decoration: underline; }
+  .error-modal a:hover {
+    color: #ccccff;
+    background-color: rgba(204, 204, 255, 0.5); }
 
 .error-modal .modal-header {
-  border-bottom: 1px solid #f3b7bd; }
+  border-bottom: 1px solid #e4606d; }
 
 .error-modal .modal-footer {
-  border-top: 1px solid #f3b7bd; }
+  border-top: none; }
 
 .inline-icon {
   height: 0.9em; }
